@@ -9,7 +9,7 @@ Siden er ren HTML, CSS og JavaScript uden byggetrin. Åbn `index.html` i en brow
 - `script.js` – kontaktlinks, tekstbånd og scroll-animationer
 - `site-config.js` – **kontaktoplysninger (Messenger, telefon, e-mail)**
 - `404.html` – side der vises, hvis en adresse ikke findes
-- `assets/` – banner og favicon
+- `assets/` – favicon
 
 ## Kontaktoplysninger
 
@@ -21,4 +21,12 @@ Når telefonnummeret er udfyldt, får siden også en "Ring"-knap i toppen og i b
 
 GitHub Pages: Settings → Pages → Deploy from branch → vælg grenen og `/ (root)`.
 
-Banneret i `assets/banner.jpg` er klippet ud af virksomhedens Facebook-opslag.
+## Billeder
+
+Fotos er fra [Unsplash](https://unsplash.com) og må bruges gratis, også kommercielt, under [Unsplash-licensen](https://unsplash.com/license). De hentes direkte fra images.unsplash.com.
+
+- Forside: [skrotbunke med badekar](https://unsplash.com/photos/5_uEbMeeJrc) af Mark Owen Wilkinson Hughes
+- Jern og metal: [gamle metaldele](https://unsplash.com/photos/WlHycHUQIvY) af Karthik Srinivas
+- Gamle møbler: [lænestol og sofa](https://unsplash.com/photos/f-HVbwmeE7c) af Vlad Ionita
+- Rydning: [trailer med møbler](https://unsplash.com/photos/iBXu_kVbXXQ) af Nico Knaack
+- Flytning: [flyttebil og møbler](https://unsplash.com/photos/k0HLWPwfJLU) af Joseph Prospere

@@ -105,12 +105,34 @@ svg { width: 1em; height: 1em; flex: none; }
 .hero-points { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .hero-points li { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: .95rem; }
 .hero-points svg { color: var(--neon); width: 18px; height: 18px; }
+.hero-media { position: relative; margin: 0; }
 .hero-media img {
-  border-radius: 20px;
-  border: 1px solid var(--border);
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: 24px; background: var(--neon-dim);
   box-shadow: 0 30px 60px rgba(22,33,26,.18), 0 8px 18px rgba(22,33,26,.08);
-  transform: rotate(1.5deg);
 }
+.hero-badge {
+  position: absolute; left: -18px; bottom: 28px;
+  display: flex; align-items: center; gap: 12px; max-width: 260px;
+  background: var(--surface); color: var(--text); border-radius: 16px; padding: 14px 18px;
+  box-shadow: 0 16px 40px rgba(22,33,26,.16); font-size: .92rem; line-height: 1.35;
+}
+.hero-badge svg { width: 34px; height: 34px; color: var(--neon); }
+.hero-badge strong { display: block; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 1.6rem; color: var(--neon); line-height: 1.1; }
+
+/* Billeder */
+.gallery { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.gallery figure { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--neon-dim); }
+.gallery img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s var(--ease-out); }
+.gallery figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 20px 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+  background: linear-gradient(180deg, transparent, rgba(10,20,13,.75));
+}
+.gallery figcaption span { background: var(--neon); color: var(--on-neon); font-size: .72rem; text-transform: uppercase; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px; }
+.split-photo { margin: 32px 0 0; border-radius: var(--radius); overflow: hidden; background: var(--neon-dim); }
+.split-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 
 /* Tekstbånd */
 .marquee-wrap { overflow: hidden; padding: 40px 0 10px; }
@@ -232,6 +254,7 @@ svg { width: 1em; height: 1em; flex: none; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(61, 122, 79, .3); }
   .btn-ghost:hover { background: var(--neon-dim); }
   .card:hover, a.contact-card:hover { border-color: var(--neon); transform: translateY(-4px); }
+  .gallery figure:hover img { transform: scale(1.04); }
   .faq-item summary:hover::after { background-color: var(--neon-dim); }
   .footer-grid ul a:hover { color: var(--neon); }
 }
@@ -239,15 +262,15 @@ svg { width: 1em; height: 1em; flex: none; }
 /* Scroll-animationer: indhold er synligt som standard og løftes kun, når JS kører */
 .js [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
-.js .hero-media[data-reveal].is-in img { animation: tilt-in 1.2s var(--ease-out); }
-@keyframes tilt-in { from { transform: rotate(6deg) scale(.94); } to { transform: rotate(1.5deg); } }
 
 /* Responsive */
 @media (max-width: 960px) {
   .hero-grid, .split, .faq-grid { grid-template-columns: 1fr; gap: 40px; }
   .cards { grid-template-columns: repeat(2, 1fr); }
-  .hero-media img { transform: none; }
-  .js .hero-media[data-reveal].is-in img { animation: none; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery figure:first-child { grid-column: 1 / -1; }
+  .gallery figure:first-child img { aspect-ratio: 16 / 9; }
+  .hero-badge { left: 12px; bottom: 12px; }
   .nav a:not(.btn) { display: none; }
   .faq-grid .section-head { margin-bottom: 0; }
 }
@@ -278,7 +301,7 @@ svg { width: 1em; height: 1em; flex: none; }
   .hero { padding: 6px; }
   .hero-frame { border-radius: 22px; padding: 104px 0 56px; }
   .section { padding: 72px 0; }
-  .cards { grid-template-columns: 1fr; }
+  .cards, .gallery { grid-template-columns: 1fr; }
   .hero-cta .btn { width: 100%; }
   .brand { font-size: 1.2rem; }
   .brand-icon { width: 26px; height: 26px; }
