@@ -5,7 +5,7 @@ window.SKROT_CONFIG = {
   // Link til Messenger, fx 'https://m.me/bjerringbroskrot'
   messenger: '',
   // Telefonnummer, fx '+45 12 34 56 78'
-  telefon: '',
+  telefon: '+45 50 12 96 56',
   // E-mail, fx 'kontakt@bjerringbroskrot.dk'
   email: '',
   // Link til Facebook-profilen (bruges, hvis Messenger-linket mangler)
