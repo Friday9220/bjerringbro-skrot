@@ -19,7 +19,7 @@ Når telefonnummeret er udfyldt, får siden også en "Ring"-knap i toppen og i b
 
 ## Udgivelse
 
-GitHub Pages: Settings → Pages → Deploy from branch → vælg grenen og `/ (root)`.
+GitHub Pages fra grenen, med domænet bjerringbroskrot.dk (se `CNAME`). DNS ligger hos Simply.com: fire A-poster for @ (185.199.108.153, .109.153, .110.153, .111.153) og en CNAME for www til friday9220.github.io.
 
 ## Billeder
 
