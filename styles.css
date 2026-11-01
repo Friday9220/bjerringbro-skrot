@@ -164,6 +164,9 @@ svg { width: 1em; height: 1em; flex: none; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .split > div p { color: var(--muted); }
 .split .btn { margin-top: 12px; }
+.split-center { align-items: center; }
+.split-media { margin: 0; border-radius: 24px; overflow: hidden; background: var(--neon-dim); box-shadow: 0 24px 50px rgba(22,33,26,.14); }
+.split-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .checklist { list-style: none; margin: 0; padding: 30px; display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .checklist li { position: relative; padding-left: 38px; font-weight: 500; }
 .checklist li::before {

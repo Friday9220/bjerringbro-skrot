@@ -25,5 +25,6 @@ GitHub Pages: Settings → Pages → Deploy from branch → vælg grenen og `/ (
 
 Fotos er fra [Unsplash](https://unsplash.com) og må bruges gratis, også kommercielt, under [Unsplash-licensen](https://unsplash.com/license). De hentes direkte fra images.unsplash.com.
 
-- Forside: [skrotbunke med badekar](https://unsplash.com/photos/5_uEbMeeJrc) af Mark Owen Wilkinson Hughes
+- Forside: [fyldt opbevaringsrum](https://unsplash.com/photos/vyOERax9oI4) af Adam Winger
+- Rydning: [garage fyldt med ting](https://unsplash.com/photos/SP4oH94qOCU) af Point3D Commercial Imaging Ltd.
 - Flytning: [flyttebil og møbler](https://unsplash.com/photos/k0HLWPwfJLU) af Joseph Prospere
