@@ -13,6 +13,11 @@
     if (/^https?:/.test(messenger)) { a.target = '_blank'; a.rel = 'noopener'; }
   });
 
+  all('[data-facebook]').forEach(function (a) {
+    if (cfg.facebook) { a.href = cfg.facebook; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.parentElement.hidden = true; }
+  });
+
   var phone = (cfg.telefon || '').trim();
   if (phone) {
     var tel = 'tel:' + phone.replace(/[^\d+]/g, '');
